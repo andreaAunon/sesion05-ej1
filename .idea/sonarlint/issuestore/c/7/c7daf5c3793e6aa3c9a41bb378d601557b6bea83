@@ -1,9 +1,11 @@
 
 ]
+java:S1854";Remove this useless assignment to local variable "isSalir".(òÔÒùÿÿÿÿ8Ë›Éïà1
+]
 java:S1854
 ";Remove this useless assignment to local variable "context".(Ï˜šÿÿÿÿÿ8ìé©ïà1
-]
-java:S1854";Remove this useless assignment to local variable "isSalir".(ÿşĞ¸ûÿÿÿÿ8á°ªïà1
 N
 java:S1481
 ",Remove this unused "context" local variable.(Ï˜šÿÿÿÿÿ8õé©ïà1
+N
+java:S1481",Remove this unused "isSalir" local variable.(òÔÒùÿÿÿÿ8Ú›Éïà1

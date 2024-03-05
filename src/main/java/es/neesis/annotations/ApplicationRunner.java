@@ -10,9 +10,6 @@ public class ApplicationRunner {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Menu application = new Menu();
 
-        boolean isSalir = application.executeMenu();
-        if(!isSalir){
-            isSalir = application.executeMenu();
-        }
+        application.executeApplication();
     }
 }

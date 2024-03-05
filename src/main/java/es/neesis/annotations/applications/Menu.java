@@ -14,6 +14,13 @@ public class Menu {
         return operationService.realizeOperation(operando1, operando2);
     }
 
+    public void executeApplication(){
+        boolean isSalir = executeMenu();
+        while(isSalir){
+            isSalir = executeMenu();
+        }
+    }
+
     public boolean executeMenu() {
         showMenu();
         Scanner scanner = new Scanner(System.in);
@@ -27,10 +34,10 @@ public class Menu {
 
             System.out.println("Resultado:");
             createOperation(operation, operando1, operando2);
-            return false;
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     public void showMenu() {
