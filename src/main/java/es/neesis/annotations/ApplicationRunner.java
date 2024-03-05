@@ -9,6 +9,10 @@ public class ApplicationRunner {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Menu application = new Menu();
-        application.showMenu();
+
+        boolean isSalir = application.executeMenu();
+        if(!isSalir){
+            isSalir = application.executeMenu();
+        }
     }
 }

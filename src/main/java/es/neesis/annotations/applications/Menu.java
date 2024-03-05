@@ -14,15 +14,8 @@ public class Menu {
         return operationService.realizeOperation(operando1, operando2);
     }
 
-    public void showMenu() {
-        System.out.println("Bienvenido a la calculadora, selecciona una operación:");
-        System.out.println("Sumar");
-        System.out.println("Restar");
-        System.out.println("Multiplicar");
-        System.out.println("Dividir");
-        System.out.println("Salir");
-        System.out.println("Seleccione una operación:");
-
+    public boolean executeMenu() {
+        showMenu();
         Scanner scanner = new Scanner(System.in);
         String operation = scanner.nextLine();
 
@@ -32,8 +25,22 @@ public class Menu {
             System.out.println("Introduzca segundo operando: ");
             int operando2 = Integer.parseInt(scanner.nextLine());
 
+            System.out.println("Resultado:");
             createOperation(operation, operando1, operando2);
+            return false;
         }
+
+        return true;
+    }
+
+    public void showMenu() {
+        System.out.println("Bienvenido a la calculadora, selecciona una operación:");
+        System.out.println("Sumar");
+        System.out.println("Restar");
+        System.out.println("Multiplicar");
+        System.out.println("Dividir");
+        System.out.println("Salir");
+        System.out.println("Seleccione una operación:");
     }
 
     private void createOperation(String operation, int operando1, int operando2){
@@ -54,7 +61,7 @@ public class Menu {
                 break;
         }
 
-        realizeOperation(operando1,operando2);
+        System.out.println(realizeOperation(operando1,operando2));
     }
 
 }
